@@ -1,97 +1,155 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Brit’s Everyday Picks</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Brit's Everyday Picks</title>
+<style>
+  /* Neutral color palette */
+  :root {
+    --cream: #f7f5f2;
+    --taupe: #a69f96;
+    --warm-grey: #7d7a75;
+    --soft-black: #2b2a28;
+    --shadow: rgba(0,0,0,0.1);
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--cream);
+    color: var(--soft-black);
+  }
+
+  header {
+    padding: 2rem 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--taupe);
+    box-shadow: 0 2px 5px var(--shadow);
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-family: 'Georgia', serif;
+    color: var(--warm-grey);
+  }
+
+  .tagline {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: var(--taupe);
+    font-size: 1.1rem;
+  }
+
+  main {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+
+  h2 {
+    font-weight: 600;
+    border-bottom: 2px solid var(--taupe);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* Collage Grid */
+  .collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px var(--shadow);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow);
+  }
+
+  .card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 150px;
+  }
+
+  .card-content {
+    padding: 1rem;
+  }
+
+  .card-title {
+    margin: 0 0 0.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--warm-grey);
+  }
+
+  .card-desc {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--taupe);
+  }
+
+  /* Responsive tagline spacing */
+  @media (max-width: 500px) {
     header {
-      background: #ff6f61;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      padding: 1rem;
     }
-    header h1 {
-      margin: 0;
-      font-weight: normal;
+    main {
+      margin: 1rem;
     }
-    .bio {
-      max-width: 600px;
-      margin: 20px auto;
-      font-size: 1.2em;
-      line-height: 1.5;
-      text-align: center;
-    }
-    .products {
-      max-width: 900px;
-      margin: 40px auto;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      justify-content: center;
-    }
-    .product-card {
-      background: white;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      border-radius: 8px;
-      width: 260px;
-      padding: 15px;
-      text-align: center;
-    }
-    .product-card img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .product-card h3 {
-      margin: 15px 0 10px;
-      font-size: 1.1em;
-    }
-    .product-card a {
-      display: inline-block;
-      background: #ff6f61;
-      color: white;
-      padding: 10px 15px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .product-card a:hover {
-      background: #e55b50;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Brit’s Everyday Picks</h1>
-  </header>
-  
-  <section class="bio">
-    <p>Helping moms + everyday women find the best baby gear, home finds, beauty deals & must-haves. Daily picks you’ll love!</p>
-  </section>
+<header>
+  <div class="logo">Brit’s Everyday Picks</div>
+  <div class="tagline">Helping moms + everyday women find the best baby gear, home finds, beauty deals & must-haves.</div>
+</header>
 
-  <section class="products">
-    <!-- Example Product Cards -->
-    <div class="product-card">
-      <img src="https://via.placeholder.com/250x150" alt="Product 1" />
-      <h3>Top Baby Stroller</h3>
-      <a href="#" target="_blank" rel="noopener">Shop Now</a>
-    </div>
-    <div class="product-card">
-      <img src="https://via.placeholder.com/250x150" alt="Product 2" />
-      <h3>Cozy Home Blanket</h3>
-      <a href="#" target="_blank" rel="noopener">Shop Now</a>
-    </div>
-    <div class="product-card">
-      <img src="https://via.placeholder.com/250x150" alt="Product 3" />
-      <h3>Beauty Serum</h3>
-      <a href="#" target="_blank" rel="noopener">Shop Now</a>
+<main>
+  <section>
+    <h2>Daily Picks You’ll Love</h2>
+    <div class="collage">
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Baby+Gear" alt="Baby Gear" />
+        <div class="card-content">
+          <h3 class="card-title">Top Baby Gear</h3>
+          <p class="card-desc">Quality and safety picks for your little ones.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Home+Finds" alt="Home Finds" />
+        <div class="card-content">
+          <h3 class="card-title">Home Finds</h3>
+          <p class="card-desc">Stylish and practical items for your living space.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Beauty+Deals" alt="Beauty Deals" />
+        <div class="card-content">
+          <h3 class="card-title">Beauty Deals</h3>
+          <p class="card-desc">Must-have beauty products at great prices.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/400x300?text=Must-Haves" alt="Must-Haves" />
+        <div class="card-content">
+          <h3 class="card-title">Everyday Must-Haves</h3>
+          <p class="card-desc">Daily essentials to simplify your life.</p>
+        </div>
+      </div>
     </div>
   </section>
+</main>
 </body>
 </html>
